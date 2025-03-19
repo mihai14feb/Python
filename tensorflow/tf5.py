@@ -7,9 +7,9 @@ train_images = train_images / 255.0 # 50k imagini, rezolutie 32x32, 3 canale de 
 test_images = test_images / 255.0 # 10k imagini pt test
 
 datagen = ImageDataGenerator( # produce modificari aleatorii pt imagini
-    rotation_range=30, # roteste imaginile aleatoriu cu pana la 20 de grade
+    rotation_range=30, # roteste imaginile aleatoriu cu pana la 30 de grade
     fill_mode='nearest',
-    width_shift_range=0.3, # deplaseaza imaginea pe orizontala cu pana la 20% din latime
+    width_shift_range=0.3, # deplaseaza imaginea pe orizontala cu pana la 30% din latime
     height_shift_range=0.3, # la fel dar pe lungime
     brightness_range=[0.8,1.2], # luminozitate
     zoom_range=0,3, # zoom 30%
