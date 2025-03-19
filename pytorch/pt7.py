@@ -21,7 +21,7 @@ class CNN(nn.Module):
         self.relu = nn.ReLU()
 
     def forward(self, x):
-        x = self.pool(self.relu(self.conv1(x))) # primul strat, imaginea e scanata cu 16 luoe si simplificata
+        x = self.pool(self.relu(self.conv1(x))) # primul strat, imaginea e scanata cu 16 lupe si simplificata
         x = self.pool(self.relu(self.conv2(x))) # alte 32 de lupe
         x = x.view(-1, 32*5*5) # intinde dimensiunea tensorului
         x = self.relu(self.fc1(x)) # functie liniara
