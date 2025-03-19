@@ -39,7 +39,7 @@ model = models.Sequential([
 lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay( # obiect pt scadere lr
     initial_learning_rate=0.001, # lr de start
     decay_steps=500, # nr de pasi dupa care lr scade
-    decay_rate=0.95 # factor de scadere, lr * decay_rate (0.9)
+    decay_rate=0.95 # factor de scadere, lr * decay_rate (0.95)
 )
 
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=lr_schedule),
